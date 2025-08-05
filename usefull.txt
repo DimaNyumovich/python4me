@@ -1,0 +1,23 @@
+python -m venv venv  ( C:\Python312\python.exe -m venv venv)
+venv\Scripts\activate
+
+pip install requests --proxy http://proxy-us.intel.com:911
+pip install openai python-dotenv --proxy http://proxy-us.intel.com:911
+
+git -c http.proxy=http://proxy-us.intel.com:912 push
+
+git -c http.proxy=http://proxy-us.intel.com:912 clone https://github.com/DimaNyumovich/llm7.git
+
+
+LLM Engineering Learning Path - name of the dialog in chatGPT
+
+Fastapi
+- installation
+         pip install "fastapi[standard]"
+
+start app
+
+1. fastapi dev main.py
+2. uvicorn main:app --reload
+3. if __name__ == "__main__":
+    uvicorn.run("1run_fastapi:app", reload=True)
